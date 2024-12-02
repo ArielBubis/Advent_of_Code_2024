@@ -1,3 +1,4 @@
+package utils;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,7 +14,8 @@ public class utils {
             testdir = (partb) ? "input_b" : "input_a";
         }
         List<String> lines = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(testdir + "/day" + day + ".txt"))) {
+        ///Advent_of_Code_2024/Advent_of_Code_2024/src/resources/input_a/day1.txt
+        try (BufferedReader reader = new BufferedReader(new FileReader("Advent_of_Code_2024/src/resources/" + testdir + "/day" + day + ".txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
