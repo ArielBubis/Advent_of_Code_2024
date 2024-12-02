@@ -1,7 +1,11 @@
 package utils;
+
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +18,9 @@ public class utils {
             testdir = (partb) ? "input_b" : "input_a";
         }
         List<String> lines = new ArrayList<>();
-        ///Advent_of_Code_2024/Advent_of_Code_2024/src/resources/input_a/day1.txt
-        try (BufferedReader reader = new BufferedReader(new FileReader("Advent_of_Code_2024/src/resources/" + testdir + "/day" + day + ".txt"))) {
+        Path filePath = Paths.get("src", "resources", testdir, "day" + day + ".txt");
+
+        try (BufferedReader reader = Files.newBufferedReader(filePath)) {
             String line;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
