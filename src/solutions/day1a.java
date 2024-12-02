@@ -1,5 +1,9 @@
+package solutions;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import utils;
 
 public class day1a {
     public static void main(String[] args) throws Exception {
